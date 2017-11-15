@@ -1,4 +1,5 @@
 from pymongo import MongoClient, GEO2D
+from pprint import pprint
 
 print("Connecting to database...")
 client = MongoClient("mongodb://localhost:27017")
@@ -10,7 +11,7 @@ print("Find a station with the id " + station_id)
 cursor = db.stations.find({'id':station_id})
 results_count=0
 for doc in cursor:
-	#print(doc)
+	pprint(doc)
 	results_count+=1
 print(str(results_count) + " result(s) found.")
 
