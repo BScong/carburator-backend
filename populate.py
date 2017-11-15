@@ -52,7 +52,8 @@ for child in root:
 	data['prices']=prices
 
 	try:
-		result = db.stations.insert_one(data)
+
+		result = db.stations.update_one({'id':data['id']},{"$set":data},upsert=True)
 
 		if not result.acknowledged:
 			to_retry.append(data) 
@@ -67,9 +68,9 @@ for child in root:
 # Retry one time if error occured
 for data in to_retry:
 	try:
-		result = db.stations.insert_one(data)
+		result = db.stations.update_one({'id':data['id']},{"$set":data},upsert=True)
 		if not result.acknowledged:
-			print("Error adding id " + data['id'] + " to the database")
+			print("Error adding/updating id " + data['id'] + " to the database")
 		else:
 			count+=1
 	except Exception as err:
@@ -78,4 +79,4 @@ for data in to_retry:
 
 client.close()
 
-print("Finished adding values, total " + str(total) + " elements, "+ str(count) + " added.")
+print("Finished adding/updating values, total " + str(total) + " elements, "+ str(count) + " updated/added.")
