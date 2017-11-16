@@ -1,0 +1,33 @@
+{
+  "name": "carburator-api",
+  "version": "1.0.0",
+  "description": "RESTful API for Carburator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BScong/carburator-backend.git"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "Carburator"
+  ],
+  "author": "Benoit Zhong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BScong/carburator-backend/issues"
+  },
+  "homepage": "https://github.com/BScong/carburator-backend#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.3"
+  }
+}
