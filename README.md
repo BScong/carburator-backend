@@ -6,10 +6,19 @@ Using Python to fetch data, NodeJS for server computations and MongoDB for data 
 Data from [prix-carburants.gouv.fr/rubrique/opendata/](https://www.prix-carburants.gouv.fr/rubrique/opendata/).
 
 ## API Usage
-NodeJS server. Not yet implemented.
+NodeJS server. Install with ```npm install```then start with ```npm start```. It should start on localhost:3000.
+
+If your MongoDB is running (and populated), you can request the different endpoints.
 
 ## Endpoints
-Not yet implemented.
+### /stations
+Returns all the stations.
+
+### /stations/id/:id
+Return the station with the ID mentionned.
+
+### /stations/lon/:lon/lat/:lat?limit=5
+Return the stations near the lonlat mentionned. You can indicate a limit (by default 20, max 20).
 
 ## Fetching data
 Launch your MongoDB server. The script uses the default location : ```mongodb://localhost:27017```.
@@ -75,5 +84,18 @@ Here is an example of formatting for a single station :
  	]
  }
 ```
+
+## Todo
+* Handle exceptions without crashing app.
+* Sanitize user input (id, lon, lat). Limit done.
+* Change id, lon, lat requests to a single endpoint with get parameters
+* Add city endpoint / postcode endpoint
+* Add search by address/city = convert address/city to lonlat then request on lonlat endpoint.
+* Add GasType parameter to searches
+* Add price filter to searches
+* Add opening hours filter to searches. (Maybe?, a lot of data has incorrect hours).
+* Write script to automatically fetch new data and update the database
+* Deploy on server
+* Tests
 
 
