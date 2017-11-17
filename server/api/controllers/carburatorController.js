@@ -20,8 +20,8 @@ exports.get_station_by_id = function(req, res) {
 };
 
 exports.get_stations_by_lonlat = function(req, res) {
-	var limit = req.query.limit
-	if (limit!=""){
+	var limit = parseInt(req.query.limit)
+	if(isNaN(limit) || limit>20 || limit < 1){
 		limit = 20
 	}
 	var search = Station.find({'lonlat':{'$near': [req.params.lon,req.params.lat]}}).limit(limit).exec(
