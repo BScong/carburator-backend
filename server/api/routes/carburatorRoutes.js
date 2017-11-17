@@ -7,6 +7,10 @@ module.exports = function(app) {
     .get(carburator.list_all_stations);
 
 
-  //app.route('/stations/:station_id')
-  //  .get(carburator.get_station_by_id);
+  app.route('/stations/id/:station_id')
+    .get(carburator.get_station_by_id);
+
+  app.route('/stations/lon/:lon/lat/:lat')
+    .get(carburator.get_stations_by_lonlat);
+
 };
