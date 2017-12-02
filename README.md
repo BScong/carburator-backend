@@ -88,7 +88,7 @@ Here is an example of formatting for a single station :
 ## Todo
 * Handle exceptions without crashing app.
 * Sanitize user input (id, lon, lat). Limit done.
-* Change id, lon, lat requests to a single endpoint with get parameters
+* Change id, lon, lat requests to a single endpoint with GET parameters
 * Add city endpoint / postcode endpoint
 * Add search by address/city = convert address/city to lonlat then request on lonlat endpoint.
 * Add GasType parameter to searches
@@ -97,5 +97,7 @@ Here is an example of formatting for a single station :
 * Write script to automatically fetch new data and update the database
 * Deploy on server
 * Tests
-
+* Cleaner structure for code
+* Better documentation for endpoints
+* Switch database from MongoDB to MySQL
 
