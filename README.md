@@ -103,3 +103,5 @@ Here is an example of formatting for a single station :
 * Frontend : Android app
 * Frontend : webapp
 * Frontend : Google Assistant integration
+* Dockerize project
+* Deployment with Capistrano
