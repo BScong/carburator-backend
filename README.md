@@ -100,4 +100,6 @@ Here is an example of formatting for a single station :
 * Cleaner structure for code
 * Better documentation for endpoints
 * Switch database from MongoDB to MySQL
-
+* Frontend : Android app
+* Frontend : webapp
+* Frontend : Google Assistant integration
