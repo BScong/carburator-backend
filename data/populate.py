@@ -4,7 +4,7 @@ from pymongo import MongoClient, GEO2D
 import datetime
 
 print("Parsing XML data...")
-tree = ET.parse('sample.xml')
+tree = ET.parse('PrixCarburants_instantane.xml')
 root = tree.getroot()
 
 print("Connecting to database...")
