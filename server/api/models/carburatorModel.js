@@ -15,7 +15,7 @@ var StationSchema = new Schema(
     type: String
   },
   postcode: {
-    type: Date
+    type: String
   },
   hours: {
     open: {
