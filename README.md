@@ -93,7 +93,7 @@ Here is an example of formatting for a single station :
 * Add search by address/city = convert address/city to lonlat then request on lonlat endpoint.
 * Add GasType parameter to searches
 * Add price filter to searches
-* Add opening hours filter to searches. (Maybe?, a lot of data has incorrect hours).
+* Add opening hours filter to searches. (Maybe?, a lot of data has incorrect hours. Maybe use Google times).
 * Write script to automatically fetch new data and update the database
 * Deploy on server
 * Tests
@@ -101,7 +101,7 @@ Here is an example of formatting for a single station :
 * Better documentation for endpoints
 * Switch database from MongoDB to MySQL
 * Frontend : Android app
-* Frontend : webapp
+* Frontend : webapp : in development
 * Frontend : Google Assistant integration
 * Dockerize project
 * Deployment with Capistrano
