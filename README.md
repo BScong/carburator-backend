@@ -5,6 +5,10 @@ Using Python to fetch data, NodeJS for server computations and MongoDB for data 
 
 Data from [prix-carburants.gouv.fr/rubrique/opendata/](https://www.prix-carburants.gouv.fr/rubrique/opendata/).
 
+Web frontend repo : [github.com/BScong/carburator-frontend-web](https://github.com/BScong/carburator-frontend-web). Deployed on [carburator.zhong.fr](https://carburator.zhong.fr).
+
+API deployed on [carburator.zhong.fr/api](https://carburator.zhong.fr/api). For all stations (json) : [carburator.zhong.fr/api/stations](https://carburator.zhong.fr/api/stations).
+
 ## API Usage
 NodeJS server. Install with ```npm install```then start with ```npm start```. It should start on localhost:3000.
 
