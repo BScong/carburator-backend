@@ -13,4 +13,9 @@ module.exports = function(app) {
   app.route('/stations/lon/:lon/lat/:lat')
     .get(carburator.get_stations_by_lonlat);
 
+  app.route('/ping')
+    .get(function(req,res){
+  		res.status(200).send("Running.") // Maybe implement express-ping (health) on ping endpoint
+  	});
+
 };
