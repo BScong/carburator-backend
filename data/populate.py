@@ -2,13 +2,14 @@ import xml.etree.ElementTree as ET
 import json
 from pymongo import MongoClient, GEO2D
 import datetime
+import os
 
 print("Parsing XML data...")
 tree = ET.parse('PrixCarburants_instantane.xml')
 root = tree.getroot()
 
 print("Connecting to database...")
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient(os.environ['MONGO_PATH']) #mongodb://localhost:27017
 db = client['carburator']
 db.stations.create_index([("lonlat", GEO2D )])
 
@@ -56,11 +57,11 @@ for child in root:
 		result = db.stations.update_one({'id':data['id']},{"$set":data},upsert=True)
 
 		if not result.acknowledged:
-			to_retry.append(data) 
+			to_retry.append(data)
 		else:
 			count+=1
 	except Exception as err:
-		to_retry.append(data) 
+		to_retry.append(data)
 		print(err)
 	total+=1
 	#print(json.dumps(data, sort_keys=True, indent=4))

@@ -4,10 +4,10 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Task = require('./api/models/carburatorModel'), //created model loading here
   bodyParser = require('body-parser');
-  
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/carburator'); 
+mongoose.connect(process.env.MONGO_PATH + '/carburator');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));

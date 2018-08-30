@@ -1,8 +1,9 @@
 from pymongo import MongoClient, GEO2D
 from pprint import pprint
+import os
 
 print("Connecting to database...")
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient(os.environ['MONGO_PATH']) #mongodb://localhost:27017
 db = client['carburator']
 
 # To find a station with a specific id
