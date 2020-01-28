@@ -28,6 +28,6 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongoose": "^4.13.3"
+    "mongoose": "^5.8.10"
   }
 }
