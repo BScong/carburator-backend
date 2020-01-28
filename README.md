@@ -37,7 +37,7 @@ You can schedule a cron job to execute ```populate.py``` to have up-to-date data
 You can find examples of queries in the ```queries.py``` file.
 
 ## Data format
-Here is an example of formatting for a single station : 
+Here is an example of formatting for a single station :
 
 ```json
 {
@@ -90,22 +90,22 @@ Here is an example of formatting for a single station :
 ```
 
 ## Todo
-* Handle exceptions without crashing app.
-* Sanitize user input (id, lon, lat). Limit done.
-* Change id, lon, lat requests to a single endpoint with GET parameters
-* Add city endpoint / postcode endpoint
-* Add search by address/city = convert address/city to lonlat then request on lonlat endpoint.
-* Add GasType parameter to searches
-* Add price filter to searches
-* Add opening hours filter to searches. (Maybe?, a lot of data has incorrect hours. Maybe use Google times).
-* Write script to automatically fetch new data and update the database
-* Deploy on server
-* Tests
-* Cleaner structure for code
-* Better documentation for endpoints
-* Switch database from MongoDB to MySQL
-* Frontend : Android app
-* Frontend : webapp : in development
-* Frontend : Google Assistant integration
-* Dockerize project
-* Deployment with Capistrano
+*   Handle exceptions without crashing app.
+*   Sanitize user input (id, lon, lat). Limit done.
+*   Change id, lon, lat requests to a single endpoint with GET parameters
+*   Add city endpoint / postcode endpoint
+*   Add search by address/city = convert address/city to lonlat then request on lonlat endpoint.
+*   Add GasType parameter to searches
+*   Add price filter to searches
+*   Add opening hours filter to searches. (Maybe?, a lot of data has incorrect hours. Maybe use Google times).
+*   Write script to automatically fetch new data and update the database
+*   Deploy on server
+*   Tests
+*   Cleaner structure for code
+*   Better documentation for endpoints
+*   Switch database from MongoDB to MySQL
+*   Frontend : Android app
+*   Frontend : webapp : in development
+*   Frontend : Google Assistant integration
+*   Dockerize project
+*   Deployment with Capistrano
